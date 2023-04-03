@@ -1,7 +1,3 @@
-export default function Events(){
-
-return(
-    <div id="eventsPage">
-        
-    </div>
-)}
+export default function Events() {
+    return 'I am events'
+}

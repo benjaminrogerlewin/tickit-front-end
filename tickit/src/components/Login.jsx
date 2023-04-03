@@ -1,8 +1,3 @@
-export default function Login(){
-
-return(
-    <div id="loginPage">
-        
-    </div>
-)}
-    
+export default function Login() {
+    return 'I am login'
+}

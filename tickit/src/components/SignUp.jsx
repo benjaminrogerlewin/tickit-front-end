@@ -1,8 +1,3 @@
-export default function SignUp(){
-
-return(
-    <div id="signUpPage">
-        
-    </div>
-)}
-    
+export default function SignUp() {
+    return 'I am sign up'
+}
