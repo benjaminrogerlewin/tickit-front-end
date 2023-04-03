@@ -1,4 +1,4 @@
-export default function EventDetailss(){
+export default function EventDetails(){
 
 return(
     <div id="eventDetailsPage">

@@ -28,19 +28,17 @@ function App() {
   };
 
 
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      <div>
-        {venueContent.map((venue, id) => (
-          <div key={venue.id}>
-            <h2>{venue.artist}</h2>
-            <button onClick={() => handleDelete(venue.id)}>delete</button>
-          </div>
-        ))}
+    return (
+      <div className="App">
+      <Nav />
+      <Routes>
+        <Route path ="/" element={<Main/>}></Route>
+        <Route path ="/Events" element={<Events/>}></Route>
+      </Routes>
+      <Footer />
       </div>
-    </div>
-  );
-}
+    );
+  }
+  
 
 export default App;
