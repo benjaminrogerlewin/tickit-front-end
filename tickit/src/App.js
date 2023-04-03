@@ -3,6 +3,12 @@ import './App.css';
 import { Routes, Route, useParams} from 'react-router-dom'
 import Client from './services/api'
 import { useEffect, useState } from 'react';
+import Home from './components/Home'
+import Nav from './components/Nav'
+import Events from './components/Events'
+import Login from './components/Login'
+import SignUp from './components/SignUp';
+import Cart from './components/Cart'
 
 function App() {
 
@@ -30,15 +36,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <div>
-        {venueContent.map((venue, id) => (
-          <div key={venue.id}>
-            <h2>{venue.artist}</h2>
-            <button onClick={() => handleDelete(venue.id)}>delete</button>
-          </div>
-        ))}
-      </div>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home venueContent={venueContent} handleDelete={handleDelete} />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }
