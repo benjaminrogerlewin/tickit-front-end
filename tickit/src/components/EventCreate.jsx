@@ -13,7 +13,8 @@ export default function EventCreate(props) {
     ticket_count: "",
     category: "",
     all_ages: "",
-    venue_id: 2
+    venue_id: 2,
+    image: ""
   });
 
   const handleChange = (e) => {
@@ -92,7 +93,7 @@ export default function EventCreate(props) {
               required
               id="description"
               name="description"
-              value={formData.image}
+              value={formData.description}
               onChange={handleChange}
               className="formTextArea"
             />
@@ -154,6 +155,21 @@ export default function EventCreate(props) {
               value={formData.title}
               onChange={handleChange}
               className="formInput"
+            />
+            <br></br>
+            <br></br>
+            <label htmlFor="image" className="homeTitle">
+              IMAGE
+            </label>
+            <br></br>
+            <br></br>
+            <textarea
+              required
+              id="image"
+              name="image"
+              value={formData.image}
+              onChange={handleChange}
+              className="formTextArea"
             />
             <br></br>
             <br></br>

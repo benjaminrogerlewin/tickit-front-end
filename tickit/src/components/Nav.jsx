@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import React,{ useState } from 'react'
-// import logo from "../logo.svg";
+import logo from "../logo.svg";
 
 import Login from './Login'
 import SignUp from './SignUp'
@@ -13,9 +13,9 @@ function Nav () {
 
     return(
         <div id="navbar">
-            {/* <Link to="/">
+            <Link to="/">
             <img id="tickit-logo" src={logo} alt="tickit logo" />
-            </Link> */}
+            </Link>
 
             <div id="links-container">
                 <Link to="/Events">
