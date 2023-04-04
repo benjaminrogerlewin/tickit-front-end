@@ -8,7 +8,6 @@ import Nav from "./components/Nav";
 import Events from "./components/Events";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
 import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
@@ -51,7 +50,7 @@ function App() {
       {/* <SignUp /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
+        <Route path="/events" element={<Events eventContent={eventContent}/>} />
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/signup" element={<SignUp />} /> */}
         <Route

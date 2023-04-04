@@ -34,6 +34,7 @@ export default function AdminEvents(props) {
                       <div>
                     <div>
                        <h1>{e.artist}</h1> 
+                       <img src={e.image} />
                     </div>
                     <Link to='/update'><button>Edit</button></Link>
                     <button onClick={() => props.handleDelete(e.id)}>delete</button>
