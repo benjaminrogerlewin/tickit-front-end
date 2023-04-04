@@ -4,7 +4,6 @@
 @import url(./css/theme.light.css) (prefers-color-scheme: light);
 @import url(./css/theme.dark.css) (prefers-color-scheme: dark);
 
-
 /* Reset */
 
 * {
@@ -14,7 +13,6 @@
 }
 
 /* Reset */
-
 
 /* App */
 
@@ -26,7 +24,6 @@
 }
 
 /* App */
-
 
 /* Navigation */
 
@@ -44,14 +41,14 @@
   gap: 1.5rem;
 }
 
-#navbar a, #links-container a {
+#navbar a,
+#links-container a {
   text-decoration: none;
   color: var(--md-sys-color-on-surface-variant);
   font-weight: 500;
 }
 
 /* Navigation */
-
 
 /* Buttons */
 
@@ -119,7 +116,6 @@
 
 /* Buttons */
 
-
 /* Home */
 
 #home-container {
@@ -130,17 +126,17 @@
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
   padding: 4rem;
+  gap: 4rem;
 }
 
 /* Home */
-
 
 /* Scrim */
 
 .scrim-background {
   height: 100%;
   width: 100%;
-  
+
   border-radius: inherit;
   -webkit-border-radius: inherit;
   -moz-border-radius: inherit;
@@ -161,7 +157,12 @@
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   border-radius: 1rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 18.77%, rgba(0, 0, 0, 0.8) 72.08%), url('https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/swvxc0lh2vfzhmirjmsa/drake?fimg-ssr-default');
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 18.77%,
+      rgba(0, 0, 0, 0.8) 72.08%
+    ),
+    url("https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/swvxc0lh2vfzhmirjmsa/drake?fimg-ssr-default");
   background-size: cover;
   background-position: center;
   padding: 4rem;
@@ -174,3 +175,128 @@
 }
 
 /* Hero */
+
+/* Top Tour Section */
+
+#top-tour-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#top-tour-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+/* Top Tour Section */
+
+/* Top Tour Card */
+
+.top-tour-card {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 1rem;
+}
+
+.top-tour-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.top-tour-card-image {
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-border-radius: 0 0 1rem 1rem;
+  -moz-border-radius: 0 0 1rem 1rem;
+  -ms-border-radius: 0 0 1rem 1rem;
+  -o-border-radius: 0 0 1rem 1rem;
+}
+
+/* Top Tour Card */
+
+/* Concert Card */
+
+#concerts-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.concert-card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+#concert-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.concert-card-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* Concert Card */
+
+/* Sport Card */
+
+#sports-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#sport-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.sport-card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.sport-card-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* Sport Card */
