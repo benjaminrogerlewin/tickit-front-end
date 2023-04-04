@@ -1,3 +1,8 @@
 export default function Events() {
-    return 'I am events'
+
+    return (
+    <>
+      <h1>'I am events'</h1>
+    </>
+  );
 }

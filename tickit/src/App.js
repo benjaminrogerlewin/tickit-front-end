@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, useParams} from 'react-router-dom'
-import Client from './services/api'
 import { useEffect, useState } from 'react';
+import Client from './services/api'
+
 import Home from './components/Home'
 import Nav from './components/Nav'
 import Events from './components/Events'
 import Login from './components/Login'
 import SignUp from './components/SignUp';
-import Cart from './components/Cart'
 
 function App() {
 
@@ -37,12 +36,13 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      {/* <Login /> */}
+      {/* <SignUp /> */}
       <Routes>
         <Route path="/" element={<Home venueContent={venueContent} handleDelete={handleDelete} />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
       </Routes>
     </div>
   );

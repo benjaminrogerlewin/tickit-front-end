@@ -2,6 +2,7 @@ const Home = (props) => {
   return (
     <>
       <h1>Hello</h1>
+        
       <div>
         {props.venueContent.map((venue, id) => (
           <div key={venue.id}>

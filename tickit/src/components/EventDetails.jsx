@@ -1,7 +1,8 @@
-export default function EventDetails(){
+export default function EventDetails() {
 
-return(
-    <div id="eventDetailsPage">
-        
-    </div>
-)}
+  return (
+    <>
+      <h1> Event details </h1>
+    </>
+  );
+}
