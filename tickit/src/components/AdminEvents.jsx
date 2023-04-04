@@ -30,13 +30,13 @@ export default function AdminEvents(props) {
             <Link to='/create'><button>Create</button></Link>
             <div>
                 <div key={event.id}>
-                    {event.events.map((e) => (
+                    {event.events.map((e, id) => (
                       <div>
                     <div>
                        <h1>{e.artist}</h1> 
                     </div>
                     <Link to='/update'><button>Edit</button></Link>
-                    <button onClick={() => props.handleDelete(event.id)}>delete</button>
+                    <button onClick={() => props.handleDelete(e.id)}>delete</button>
                     </div>
                 ))}
                    

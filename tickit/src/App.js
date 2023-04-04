@@ -42,7 +42,6 @@ function App() {
     Client.delete(`/events/${id}`).then(() => {
       getContent();
     });
-    console.log(id);
   };
 
   return (
@@ -50,7 +49,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
+        <Route path="/events" element={<Events eventContent={eventContent}/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
