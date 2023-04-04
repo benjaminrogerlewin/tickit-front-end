@@ -1,1 +1,0 @@
-# tickit-front-end
