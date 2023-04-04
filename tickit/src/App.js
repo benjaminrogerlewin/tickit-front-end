@@ -49,12 +49,7 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home venueContent={venueContent} handleDelete={handleDelete} />
-          }
-        />
+        <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
