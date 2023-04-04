@@ -47,12 +47,13 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      {/* <Login /> */}
+      {/* <SignUp /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events eventContent={eventContent}/>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/events" element={<Events />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
         <Route
           path="/admin"
           element={<AdminVenues eventContent={eventContent} venue={venue} />}
