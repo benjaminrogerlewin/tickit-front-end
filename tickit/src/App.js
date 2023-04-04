@@ -8,7 +8,6 @@ import Nav from "./components/Nav";
 import Events from "./components/Events";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
 import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";

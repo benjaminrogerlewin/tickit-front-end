@@ -12,13 +12,13 @@ function Login({setOpenLogin}) {
     return (
         <div className="modal-background">
             <section className="modal-container">
+                <div className="modal-header">
                 <button 
                     className="close-modal"
                     onClick={() => {setOpenLogin(false);}}
                     >
                     &times;
                 </button>
-                <div className="modal-header">
                     <h1 className="modal-title">LOGIN</h1>
                 </div>
                 <div className="modal-body">
