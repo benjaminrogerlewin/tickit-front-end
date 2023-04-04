@@ -1,7 +1,9 @@
+import Hero from "./Hero";
+
 const Home = (props) => {
   return (
-    <>
-      <h1>Hello</h1>
+    <div id="home-container">
+      <Hero />
       <div>
         {props.venueContent.map((venue, id) => (
           <div key={venue.id}>
@@ -10,7 +12,7 @@ const Home = (props) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
