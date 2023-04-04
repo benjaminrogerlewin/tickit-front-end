@@ -20,6 +20,9 @@ const Nav = () => {
         {/* <Link to="/cart">
           <button>My Cart</button>
         </Link> */}
+        <Link to="/admin">
+          <button>admin</button>
+        </Link>
       </div>
     </div>
   );

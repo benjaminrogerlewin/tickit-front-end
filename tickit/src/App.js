@@ -1,3 +1,4 @@
+import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route, useParams } from "react-router-dom";
 import Client from "./services/api";
@@ -8,15 +9,28 @@ import Events from "./components/Events";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Cart from "./components/Cart";
+import AdminEvents from "./components/AdminEvents";
+import EventCreate from "./components/EventCreate";
+import EventUpdate from "./components/EventUpdate";
+import AdminVenues from "./components/AdminVenues";
 
 function App() {
-  const [venueContent, setVenueContent] = useState([]);
+  const [eventContent, setEventContent] = useState([]);
+  const [venue, setVenue] = useState([]);
+  const getVenue = () => {
+    Client.get(`/venues`).then((getVenue) => {
+      setVenue(getVenue.data);
+    });
+  };
 
-  const { id } = useParams();
+  useEffect(() => {
+    getVenue();
+  }, []);
 
+  // Read Data
   const getContent = () => {
     Client.get(`/events`).then((getContent) => {
-      setVenueContent(getContent.data);
+      setEventContent(getContent.data);
     });
   };
 
@@ -45,6 +59,28 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/admin"
+          element={<AdminVenues eventContent={eventContent} venue={venue} />}
+        />
+        <Route
+          path="/admin/:id"
+          element={
+            <AdminEvents
+              eventContent={eventContent}
+              handleDelete={handleDelete}
+              venue={venue}
+            />
+          }
+        />
+        <Route
+          path="/create"
+          element={<EventCreate eventContent={eventContent} />}
+        />
+        <Route
+          path="/update"
+          element={<EventUpdate eventContent={eventContent} />}
+        />
       </Routes>
     </div>
   );
