@@ -2,7 +2,6 @@ import { useState } from "react";
 import Client from "../services/api";
 
 export default function EventCreate(props) {
-  let id = 5;
   const [createEvent, setCreateEvent] = useState([]);
   const [formData, setFormData] = useState({
     artist: "",
@@ -13,8 +12,8 @@ export default function EventCreate(props) {
     ticket_count: "",
     category: "",
     all_ages: "",
-    venue_id: 2,
-    image: ""
+    venue_id: 4,
+    image: "",
   });
 
   const handleChange = (e) => {
@@ -107,7 +106,7 @@ export default function EventCreate(props) {
               type="text"
               id="price"
               name="price"
-              value={formData.title}
+              value={formData.price}
               onChange={handleChange}
               className="formInput"
             />
@@ -122,7 +121,7 @@ export default function EventCreate(props) {
               type="text"
               id="ticket_count"
               name="ticket_count"
-              value={formData.title}
+              value={formData.ticket_count}
               onChange={handleChange}
               className="formInput"
             />
@@ -137,7 +136,7 @@ export default function EventCreate(props) {
               type="text"
               id="category"
               name="category"
-              value={formData.title}
+              value={formData.category}
               onChange={handleChange}
               className="formInput"
             />
@@ -152,7 +151,7 @@ export default function EventCreate(props) {
               type="text"
               id="all_ages"
               name="all_ages"
-              value={formData.title}
+              value={formData.all_ages}
               onChange={handleChange}
               className="formInput"
             />

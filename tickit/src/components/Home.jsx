@@ -2,11 +2,7 @@ import Hero from "./Hero";
 import TopTourCard from "./TopTourCard";
 import ConcertCard from "./ConcertCard";
 import SportCard from "./SportCard";
-import Login from "./Login";
-import SignUp from "./SignUp";
-import { useState } from 'react';
-
-
+import ComedyCard from "./ComedyCard";
 
 const Home = (props) => {
   const [registerOpen, setRegisterOpen] = useState(false);
@@ -41,6 +37,15 @@ const Home = (props) => {
           <SportCard />
           <SportCard />
           <SportCard />
+        </div>
+      </div>
+
+      <div id="comedy-section">
+        <h2>Comedy</h2>
+        <div id="comedy-cards">
+          <ComedyCard />
+          <ComedyCard />
+          <ComedyCard />
         </div>
       </div>
 
