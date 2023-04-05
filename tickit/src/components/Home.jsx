@@ -3,8 +3,15 @@ import TopTourCard from "./TopTourCard";
 import ConcertCard from "./ConcertCard";
 import SportCard from "./SportCard";
 import ComedyCard from "./ComedyCard";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = (props) => {
+
+  if (props.eventContent && props.eventContent.length > 0) {
+    console.log(props.eventContent);
+  
+
   return (
     <div id="home-container">
       <Hero />
@@ -12,8 +19,7 @@ const Home = (props) => {
       <div id="top-tour-section">
         <h2>Top Tours</h2>
         <div id="top-tour-cards">
-          <TopTourCard />
-          <TopTourCard />
+          <TopTourCard eventContent={props.eventContent}/>
           {/* <TopTourCard /> */}
           {/* <TopTourCard /> */}
         </div>
@@ -22,9 +28,9 @@ const Home = (props) => {
       <div id="concerts-section">
         <h2>Concerts</h2>
         <div id="concert-cards">
-          <ConcertCard />
-          <ConcertCard />
-          <ConcertCard />
+          <ConcertCard eventContent={props.eventContent}/>
+          {/* <ConcertCard eventContent={props.eventContent}/>
+          <ConcertCard eventContent={props.eventContent}/> */}
         </div>
       </div>
 
@@ -56,6 +62,7 @@ const Home = (props) => {
       </div> */}
     </div>
   );
+    }
 };
 
 export default Home;
