@@ -6,7 +6,7 @@ export default function ConcertCard(props) {
         <div>
       <img
         className="concert-card-image"
-        src="https://via.placeholder.com/600x800?text=Concert+Image"
+        src={event.image}
         alt="Concert"
       />
       <h3>{event.artist}</h3>

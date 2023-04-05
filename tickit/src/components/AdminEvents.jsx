@@ -26,27 +26,38 @@ export default function AdminEvents(props) {
     return <div>Loading...</div>;
   }
 
-    console.log(event)
+  console.log(event);
 
-    return (
-        <>
-            <Link to='/create'><button>Create</button></Link>
-            <div>
-                <div key={event.id}>
-                    {event.events.map((e, id) => (
-                      <div>
-                    <div>
-                       <h1>{e.artist}</h1> 
-                       <img src={e.image} />
-                    </div>
-                    <button onClick={() => showEvent(e)}>Edit</button>
-                    <button onClick={() => props.handleDelete(e.id)}>delete</button>
-                    </div>
-                ))}
-                   
-                    
-                </div>
+  return (
+    <div id="events-main-container">
+      <Link to="/create">
+        <button className="primary-tonal-button">Create</button>
+      </Link>
+      <div id="events-container">
+        <div key={event.id}>
+          {event.events.map((e, id) => (
+            <div className="event-card">
+              <h2>{e.artist}</h2>
+              <p>Date:{e.date}</p>
+              <p>Time: {e.time}</p>
+              <p>Description: {e.description}</p>
+              <p>Price: ${e.price}</p>
+              <p>Ticke Count: {e.ticket_count}</p>
+              <p> Category: {e.category}</p>
+              <img className="event-image" src={e.image} alt="Event" />
+              <button className="primary-button" onClick={() => showEvent(e)}>
+                Edit
+              </button>
+              <button
+                className="link-button"
+                onClick={() => props.handleDelete(e.id)}
+              >
+                delete
+              </button>
             </div>
-        </>
-    );
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
