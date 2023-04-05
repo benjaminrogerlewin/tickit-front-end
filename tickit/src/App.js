@@ -27,7 +27,7 @@ function App() {
     category: "",
     all_ages: "",
     image: "",
-    venue_id: 3
+    venue_id: 4,
   });
 
   const getVenue = () => {
@@ -53,7 +53,7 @@ function App() {
 
   const handleDelete = (id) => {
     Client.delete(`/events/${id}`).then(() => {
-      navigate(`/admin`)
+      navigate(`/admin`);
     });
   };
 
@@ -68,7 +68,7 @@ function App() {
   };
 
   const handleSubmit = async (e, id) => {
-    console.log('id:', id)
+    console.log("id:", id);
     e.preventDefault();
     Client.put(`/events/${id}`, formData).then(() => {
       navigate("/admin");
