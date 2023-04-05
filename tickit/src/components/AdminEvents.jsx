@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import Client from "../services/api";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 export default function AdminEvents(props) {
 
     const [event, setEvent] = useState(null);
 
     let { id } = useParams();
+
+    let navigate = useNavigate();
+
+    const showEvent = (e) => {
+      navigate(`${e.id}`);
+    };
 
     useEffect(() => {
         if (!id) {
@@ -36,7 +42,7 @@ export default function AdminEvents(props) {
                        <h1>{e.artist}</h1> 
                        <img src={e.image} />
                     </div>
-                    <Link to='/update'><button>Edit</button></Link>
+                    <button onClick={() => showEvent(e)}>Edit</button>
                     <button onClick={() => props.handleDelete(e.id)}>delete</button>
                     </div>
                 ))}

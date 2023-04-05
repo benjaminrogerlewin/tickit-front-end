@@ -7,20 +7,9 @@ export default function AdminVenues(props) {
     let navigate = useNavigate()
 
     const showEvents = (ven) => {
+        console.log(ven.id)
         navigate(`${ven.id}`)
     }
-
-    // const [venue, setVenue] = useState([])
-
-    // const getVenue = () => {
-    //     Client.get(`/venues`).then((getVenue) => {
-    //       setVenue(getVenue.data);
-    //     });
-    //   };
-    
-    //   useEffect(() => {
-    //     getVenue();
-    //   }, []);
 
     return(
         <>
