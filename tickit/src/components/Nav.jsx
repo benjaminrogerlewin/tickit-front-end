@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom'
-import React,{ useState } from 'react'
+import React from 'react'
 import logo from "../logo.svg";
-import Login from './Login'
-import SignUp from './SignUp'
-
 
 function Nav () {
-
-    const [loginOpen, setLoginOpen] = useState(false);
-    const [registerOpen, setRegisterOpen] = useState(false);
 
     return(
         <div id="navbar">

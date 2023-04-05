@@ -1,7 +1,6 @@
 // import "../Modal.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AdminVenues from "./AdminVenues";
 
 function Login() {
 
