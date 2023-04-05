@@ -13,7 +13,6 @@ import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
 import { Data } from './Data';
-import Footer from "./components/Footer";
 
 function App() {
   const [eventContent, setEventContent] = useState([]);
@@ -30,7 +29,6 @@ function App() {
     image: "",
     venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id,
     event_id: ""
-
   });
 
   useEffect(() => {
@@ -60,7 +58,7 @@ function App() {
 
   const handleDelete = (id) => {
     Client.delete(`/events/${id}`).then(() => {
-      navigate(`/admin`);
+      navigate(`/admin`)
     });
   };
 
@@ -75,7 +73,7 @@ function App() {
   };
 
   const handleSubmit = async (e, id) => {
-    console.log("id:", id);
+    console.log('id:', id)
     e.preventDefault();
     console.log(formData)
     Client.put(`/events/${id}`, formData).then(() => {
@@ -86,20 +84,12 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<<<< Temporary merge branch 1
-    <Nav />
-    <Routes>
-      <Route path ="/" element={<Main/>}></Route>
-      <Route path ="/Events" element={<Events/>}></Route>
-    </Routes>
-    <Footer />
-=========
+      <Data.Provider value={{formData, setFormData}}>
       <Nav />
       {/* <Login /> */}
       {/* <SignUp /> */}
-
       <Routes>
-        <Route path="/" element={<Home eventContent={eventContent} />} />
+        <Route path="/" element={<Home eventContent={eventContent}/>} />
         <Route
           path="/events"
           element={<Events eventContent={eventContent} />}
@@ -144,16 +134,8 @@ function App() {
         />
       </Routes>
       </Data.Provider>
-
-      <Footer />
-
     </div>
   );
 }
 
 export default App;
-<<<<<<<<< Temporary merge branch 1
-
-
-=========
->>>>>>>>> Temporary merge branch 2
