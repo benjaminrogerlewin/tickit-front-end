@@ -77,56 +77,36 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      {/* <Login /> */}
-      {/* <SignUp /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/events"
-          element={<Events eventContent={eventContent} />}
-        />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/signup" element={<SignUp />} /> */}
-        <Route
-          path="/admin"
-          element={
-            <AdminVenues
-              eventContent={eventContent}
-              venue={venue}
-              showEvents={showEvents}
-            />
-          }
-        />
-        <Route
-          path="/admin/:id"
-          element={
-            <AdminEvents
-              eventContent={eventContent}
-              handleDelete={handleDelete}
-              venue={venue}
-            />
-          }
-        />
-        <Route
-          path="/create"
-          element={<EventCreate eventContent={eventContent} />}
-        />
-        <Route
-          path="/admin/:id/:id"
-          element={
-            <EventUpdate
-              eventContent={eventContent}
-              venue={venue}
-              handleSubmit={handleSubmit}
-              handleChange={handleChange}
-              formData={formData}
-            />
-          }
-        />
-      </Routes>
+<<<<<<<<< Temporary merge branch 1
+    <Nav />
+    <Routes>
+      <Route path ="/" element={<Main/>}></Route>
+      <Route path ="/Events" element={<Events/>}></Route>
+    </Routes>
+    <Footer />
+=========
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>>>> Temporary merge branch 2
     </div>
   );
 }
 
 export default App;
+<<<<<<<<< Temporary merge branch 1
+
+
+=========
+>>>>>>>>> Temporary merge branch 2
