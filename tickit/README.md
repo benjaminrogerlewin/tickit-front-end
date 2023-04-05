@@ -1,8 +1,11 @@
 # Welcome To Tickit!
+[Tickit] (https://tephpez.imgur.com/all)
 **BLURB**
 blurb
 
 ## The Team
+
+We chose a fully collaborative experience where we were able to learn from and support each other throughout the full-stack process.
 
 `Fernando Dorado`
 [GitHub] (https://github.com/lastnameisgold) |
@@ -17,13 +20,25 @@ blurb
 [GitHub] (https://github.com/tephpez)
 [LinkedIn] (https://www.linkedin.com/in/tephpez/)
 
-### `npm test`
+## Features
+
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+
+## Backend
 
 
-### `npm run build`
-
-
-### `npm run eject`
+## Links
+[Trello] ()
+[Brainstorm] ()
+[Wireframe] ()
+[ERD] ()
+[]
 
 
 
