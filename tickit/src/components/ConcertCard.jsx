@@ -1,5 +1,4 @@
 export default function ConcertCard(props) {
-  console.log(props.eventContent);
   return (
     <div id="concert-cards">
       {props.eventContent &&

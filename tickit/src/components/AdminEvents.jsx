@@ -11,9 +11,9 @@ export default function AdminEvents(props) {
 
   let navigate = useNavigate();
 
-  const showEvent = (e) => {
-    navigate(`${e.id}`);
-  };
+  // const showEvent = (e) => {
+  //   navigate(`${e.id}`);
+  // };
 
     const showEvent = (e) => {
         console.log(e)
@@ -46,7 +46,7 @@ export default function AdminEvents(props) {
   return (
     <div id="events-main-container">
       <Link to="/create">
-        <button className="primary-tonal-button">Create</button>
+        <button className="primary-tonal-button" onClick={() => local()}>Create</button>
       </Link>
       <div id="events-container">
         <div key={event.id}>
