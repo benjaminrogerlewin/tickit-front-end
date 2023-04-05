@@ -83,7 +83,7 @@ function App() {
       {/* <SignUp /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home eventContent={eventContent} />} />
         <Route
           path="/events"
           element={<Events eventContent={eventContent} />}
