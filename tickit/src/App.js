@@ -12,6 +12,7 @@ import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
+import { Data } from './Data';
 import Footer from "./components/Footer";
 
 function App() {
@@ -27,9 +28,15 @@ function App() {
     category: "",
     all_ages: "",
     image: "",
-    venue_id: 4,
+    venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id,
+    event_id: ""
+
   });
 
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
+  
   const getVenue = () => {
     Client.get(`/venues`).then((getVenue) => {
       setVenue(getVenue.data);
@@ -70,6 +77,7 @@ function App() {
   const handleSubmit = async (e, id) => {
     console.log("id:", id);
     e.preventDefault();
+    console.log(formData)
     Client.put(`/events/${id}`, formData).then(() => {
       navigate("/admin");
       getContent();
@@ -78,6 +86,7 @@ function App() {
 
   return (
     <div className="App">
+      <Data.Provider value={{formData, setFormData}}>
       <Nav />
       {/* <Login /> */}
       {/* <SignUp /> */}
@@ -127,8 +136,10 @@ function App() {
           }
         />
       </Routes>
+      </Data.Provider>
 
       <Footer />
+
     </div>
   );
 }
