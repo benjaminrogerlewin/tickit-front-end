@@ -1,7 +1,7 @@
 // import "../Modal.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SignUp from "./SignUp";
+import AdminVenues from "./AdminVenues";
 
 function Login() {
 
@@ -22,7 +22,6 @@ function Login() {
     <div className="form-container">
 
       <div className="form-img" id="login-img">
-        {/* <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29uY2VydHxlbnwwfHwwfHw%3D&w=1000&q=80"></img> */}
       </div>
       
       <div className='form-body'>
@@ -49,9 +48,9 @@ function Login() {
           </form>
           </div>
         <div className="form-footer">
-          <button className="primary-button" style={{ marginRight: "20px" }}>
-            Login
-          </button>
+          <Link to="/AdminVenues">
+            <button className="primary-button">Login</button>
+          </Link>
               </div>
               </div>
         </div>
