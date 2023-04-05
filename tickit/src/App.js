@@ -12,7 +12,7 @@ import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
-import Footer from "./components/Footer";
+import { Data } from './Data';
 
 function App() {
   const [eventContent, setEventContent] = useState([]);
@@ -27,9 +27,14 @@ function App() {
     category: "",
     all_ages: "",
     image: "",
-    venue_id: 4,
+    venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id,
+    event_id: ""
   });
 
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
+  
   const getVenue = () => {
     Client.get(`/venues`).then((getVenue) => {
       setVenue(getVenue.data);
@@ -53,7 +58,7 @@ function App() {
 
   const handleDelete = (id) => {
     Client.delete(`/events/${id}`).then(() => {
-      navigate(`/admin`);
+      navigate(`/admin`)
     });
   };
 
@@ -68,8 +73,9 @@ function App() {
   };
 
   const handleSubmit = async (e, id) => {
-    console.log("id:", id);
+    console.log('id:', id)
     e.preventDefault();
+    console.log(formData)
     Client.put(`/events/${id}`, formData).then(() => {
       navigate("/admin");
       getContent();
@@ -78,10 +84,16 @@ function App() {
 
   return (
     <div className="App">
+      <Data.Provider value={{formData, setFormData}}>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events eventContent={eventContent}/>} />
+        <Route path="/" element={<Home eventContent={eventContent}/>} />
+        <Route
+          path="/events"
+          element={<Events eventContent={eventContent} />}
+        />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
         <Route
           path="/admin"
           element={
@@ -125,8 +137,7 @@ function App() {
         path="/SignUp" element={<SignUp />}>
         </Route>
       </Routes>
-
-      <Footer />
+      </Data.Provider>
     </div>
   );
 }
