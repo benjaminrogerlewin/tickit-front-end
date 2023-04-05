@@ -21,8 +21,6 @@ const EventUpdate = (props) => {
     getSelectedEvent();
   }, [props.movieContent]);
 
- 
-
   return (
     <div className="pageContainer">
       <div className="body">
@@ -42,7 +40,6 @@ const EventUpdate = (props) => {
               type="text"
               id="artist"
               name="artist"
-              placeholder={event.artist}
               value={props.formData.artist}
               onChange={props.handleChange}
               className="formInput"
@@ -60,7 +57,6 @@ const EventUpdate = (props) => {
               type="text"
               id="date"
               name="date"
-              placeholder={event.artist}
               value={props.formData.date}
               onChange={props.handleChange}
               className="formInput"
@@ -78,7 +74,6 @@ const EventUpdate = (props) => {
               type="text"
               id="time"
               name="time"
-              placeholder={event.artist}
               value={props.formData.time}
               onChange={props.handleChange}
               className="formInput"
@@ -96,7 +91,6 @@ const EventUpdate = (props) => {
               type="text"
               id="description"
               name="description"
-              placeholder={event.artist}
               value={props.formData.description}
               onChange={props.handleChange}
               className="formInput"
@@ -114,7 +108,6 @@ const EventUpdate = (props) => {
               type="text"
               id="price"
               name="price"
-              placeholder={event.artist}
               value={props.formData.price}
               onChange={props.handleChange}
               className="formInput"
@@ -132,7 +125,6 @@ const EventUpdate = (props) => {
               type="text"
               id="ticket_count"
               name="ticket_count"
-              placeholder={event.artist}
               value={props.formData.ticket_count}
               onChange={props.handleChange}
               className="formInput"
@@ -150,7 +142,6 @@ const EventUpdate = (props) => {
               type="text"
               id="category"
               name="category"
-              placeholder={event.artist}
               value={props.formData.category}
               onChange={props.handleChange}
               className="formInput"
@@ -168,7 +159,6 @@ const EventUpdate = (props) => {
               type="text"
               id="all_ages"
               name="all_ages"
-              placeholder={event.artist}
               value={props.formData.all_ages}
               onChange={props.handleChange}
               className="formInput"
@@ -186,7 +176,6 @@ const EventUpdate = (props) => {
               type="text"
               id="image"
               name="image"
-              placeholder={event.artist}
               value={props.formData.image}
               onChange={props.handleChange}
               className="formInput"

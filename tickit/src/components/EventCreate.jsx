@@ -2,7 +2,6 @@ import { useState } from "react";
 import Client from "../services/api";
 
 export default function EventCreate(props) {
- 
   const [createEvent, setCreateEvent] = useState([]);
   const [formData, setFormData] = useState({
     artist: "",
@@ -13,11 +12,9 @@ export default function EventCreate(props) {
     ticket_count: "",
     category: "",
     all_ages: "",
-    venue_id: 3,
-    image: ""
+    venue_id: 4,
+    image: "",
   });
-
-  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });

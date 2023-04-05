@@ -18,22 +18,14 @@ function Nav() {
         <Link to="/Events">
           <p>Events</p>
         </Link>
-        <button
-          className="login-btn"
-          onClick={() => {
-            setLoginOpen(true);
-          }}
-        >
-          Login
-        </button>
-        <button
-          className="primary-button"
-          onClick={() => {
-            setRegisterOpen(true);
-          }}
-        >
-          Sign Up
-        </button>
+
+        <Link to="/Login">
+          <p>Login</p>
+        </Link>
+
+        <Link to="/SignUp">
+          <button className="primary-button">Sign Up</button>
+        </Link>
 
         {loginOpen && <Login setOpenLogin={setLoginOpen} />}
         {registerOpen && <SignUp setOpenRegister={setRegisterOpen} />}
