@@ -12,6 +12,7 @@ import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
+import Footer from "./components/Footer";
 
 function App() {
   const [eventContent, setEventContent] = useState([]);
@@ -77,29 +78,54 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<<<< Temporary merge branch 1
-    <Nav />
-    <Routes>
-      <Route path ="/" element={<Main/>}></Route>
-      <Route path ="/Events" element={<Events/>}></Route>
-    </Routes>
-    <Footer />
-=========
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
->>>>>>>>> Temporary merge branch 2
+      <Nav />
+      {/* <Login /> */}
+      {/* <SignUp /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/events"
+          element={<Events eventContent={eventContent} />}
+        />
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
+        <Route
+          path="/admin"
+          element={
+            <AdminVenues
+              eventContent={eventContent}
+              venue={venue}
+              showEvents={showEvents}
+            />
+          }
+        />
+        <Route
+          path="/admin/:id"
+          element={
+            <AdminEvents
+              eventContent={eventContent}
+              handleDelete={handleDelete}
+              venue={venue}
+            />
+          }
+        />
+        <Route
+          path="/create"
+          element={<EventCreate eventContent={eventContent} />}
+        />
+        <Route
+          path="/admin/:id/:id"
+          element={
+            <EventUpdate
+              eventContent={eventContent}
+              venue={venue}
+              handleSubmit={handleSubmit}
+              handleChange={handleChange}
+              formData={formData}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
