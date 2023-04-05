@@ -131,8 +131,4 @@ function App() {
 }
 
 export default App;
-<<<<<<<<< Temporary merge branch 1
 
-
-=========
->>>>>>>>> Temporary merge branch 2
