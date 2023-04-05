@@ -1,4 +1,4 @@
-export default function ConcertCard() {
+export default function ConcertCard(props) {
   return (
     <div id="concert-cards">
       {props.eventContent &&

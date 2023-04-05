@@ -14,22 +14,20 @@ const Home = (props) => {
       <div id="home-container">
         <Hero />
 
-      <div id="top-tour-section">
-        <h2>Top Tours</h2>
-        <div id="top-tour-cards">
-          <TopTourCard />
-          <TopTourCard />
-          {/* <TopTourCard /> */}
-          {/* <TopTourCard /> */}
+        <div id="top-tour-section">
+          <h2>Top Tours</h2>
+          <div id="top-tour-cards">
+            <TopTourCard eventContent={props.eventContent} />
+            {/* <TopTourCard /> */}
+            {/* <TopTourCard /> */}
+          </div>
         </div>
-      </div>
 
-      <div id="concerts-section">
-        <h2>Concerts</h2>
-        <div id="concert-cards">
-          <ConcertCard />
-          <ConcertCard />
-          <ConcertCard />
+        <div id="concerts-section">
+          <h2>Concerts</h2>
+          <ConcertCard eventContent={props.eventContent} />
+          {/* <ConcertCard eventContent={props.eventContent}/>
+          <ConcertCard eventContent={props.eventContent}/> */}
         </div>
 
         <div id="sports-section">
@@ -58,8 +56,9 @@ const Home = (props) => {
           </div>
         ))}
       </div> */}
-    </div>
-  );
+      </div>
+    );
+  }
 };
 
 export default Home;
