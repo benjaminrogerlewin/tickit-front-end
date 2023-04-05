@@ -20,6 +20,10 @@ export default function AdminEvents(props) {
       localStorage.setItem('formData', formDataString);
       navigate(`${e.id}`);
     };
+    const local = () => {
+      const formDataString = JSON.stringify(formData);
+      localStorage.setItem('formData', formDataString);
+    };
 
     useEffect(() => {
         if (!id) {
@@ -40,7 +44,7 @@ export default function AdminEvents(props) {
 
     return (
         <>
-            <Link to='/create'><button>Create</button></Link>
+            <Link to='/create'><button onClick={() => local()}>Create</button></Link>
             <div>
                 <div key={event.id}>
                     {event.events.map((e, id) => (

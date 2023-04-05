@@ -27,6 +27,10 @@ export default function EventCreate(props) {
   };
 
   const handleSubmit = async (e) => {
+    const formDataString = JSON.stringify(formData);
+  
+    localStorage.setItem('formData', formDataString);
+    
     e.preventDefault();
     console.log(formData)
     const response = await Client.post(`/events`, formData);

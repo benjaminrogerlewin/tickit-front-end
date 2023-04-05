@@ -27,7 +27,7 @@ function App() {
     category: "",
     all_ages: "",
     image: "",
-    venue_id: "",
+    venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id,
     event_id: ""
   });
 
@@ -75,6 +75,7 @@ function App() {
   const handleSubmit = async (e, id) => {
     console.log('id:', id)
     e.preventDefault();
+    console.log(formData)
     Client.put(`/events/${id}`, formData).then(() => {
       navigate("/admin");
       getContent();
