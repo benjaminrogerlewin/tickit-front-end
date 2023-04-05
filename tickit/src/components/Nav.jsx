@@ -13,7 +13,7 @@ function Nav () {
     return(
         <div id="navbar">
             <Link to="/">
-            <img id="tickit-logo" src={logo} alt="tickit logo" />
+            <img id="tickit-logo" src={logo} alt="tickit logo" style={{marginRight:'20px'}} />
             </Link>
 
             <div id="links-container">
