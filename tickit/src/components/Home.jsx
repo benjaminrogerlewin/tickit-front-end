@@ -5,13 +5,9 @@ import SportCard from "./SportCard";
 import ComedyCard from "./ComedyCard";
 
 const Home = (props) => {
-  const [registerOpen, setRegisterOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
   return (
     <div id="home-container">
       <Hero />
-      {loginOpen && <Login setOpenLogin={setLoginOpen} />}
-      {registerOpen && <SignUp setOpenRegister={setRegisterOpen} />}
       <div id="top-tour-section">
         <h2>Top Tours</h2>
         <div id="top-tour-cards">
