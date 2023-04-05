@@ -2,12 +2,12 @@ export default function TopTourCard(props) {
   return (
     <div className="top-tour-card">
       <div className="top-tour-card-content">
-        <h3>Event Name</h3>
-        <p>Event Date</p>
+        <h3>{props.eventContent[2].artist}</h3>
+        <p>{props.eventContent[2].date}</p>
       </div>
       <img
         className="top-tour-card-image"
-        src="https://via.placeholder.com/600x300?text=Top+Tour+Image"
+        src={props.eventContent[2].image}
         alt="Top Tour"
       />
     </div>
