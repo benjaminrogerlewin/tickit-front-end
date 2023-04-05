@@ -12,13 +12,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--md-sys-color-background);
+}
+
 /* Reset */
 
 /* App */
 
 .App {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
 }
@@ -131,21 +135,6 @@
 
 /* Home */
 
-/* Scrim */
-
-.scrim-background {
-  height: 100%;
-  width: 100%;
-
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
-}
-
-/* Scrim */
-
 /* Hero */
 
 #hero {
@@ -154,8 +143,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  color: #ffffff;
   border-radius: 1rem;
   background: linear-gradient(
       180deg,
@@ -164,7 +152,7 @@
     ),
     url("https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/swvxc0lh2vfzhmirjmsa/drake?fimg-ssr-default");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   padding: 4rem;
 }
 
@@ -300,3 +288,63 @@
 }
 
 /* Sport Card */
+
+/* Comedy Card */
+#comedy-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#comedy-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.comedy-card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.comedy-card-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* Comedy Card */
+
+/* Footer */
+#footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 4rem;
+  gap: 4rem;
+}
+
+#footer-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Footer */

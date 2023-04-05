@@ -12,6 +12,7 @@ import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
+import Footer from "./components/Footer";
 
 function App() {
   const [eventContent, setEventContent] = useState([]);
@@ -48,9 +49,13 @@ function App() {
       <Nav />
       {/* <Login /> */}
       {/* <SignUp /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events eventContent={eventContent}/>} />
+        <Route
+          path="/events"
+          element={<Events eventContent={eventContent} />}
+        />
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/signup" element={<SignUp />} /> */}
         <Route
@@ -76,6 +81,8 @@ function App() {
           element={<EventUpdate eventContent={eventContent} />}
         />
       </Routes>
+
+      <Footer />
     </div>
   );
 }
