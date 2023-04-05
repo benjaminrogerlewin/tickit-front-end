@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import React,{ useState } from 'react'
 import logo from "../logo.svg";
-
 import Login from './Login'
 import SignUp from './SignUp'
 
@@ -21,26 +20,12 @@ function Nav () {
                 <Link to="/Events">
                     <p>Events</p>
                 </Link>
-                <button 
-                    className="login-btn" 
-                    onClick={() => {setLoginOpen(true);
-                    }}
-                >
-                    Login
-                </button>
-                <button 
-                    className="primary-button" 
-                    onClick={() => {setRegisterOpen(true);
-                    }}
-                >
-                    Sign Up
-                </button>
-
-
-                {loginOpen && <Login setOpenLogin={setLoginOpen} />}
-                {registerOpen && <SignUp setOpenRegister={setRegisterOpen} />}
-
-
+                <Link to="/Login">
+                    <p>Login</p>
+                </Link>
+                <Link to="/SignUp">
+                <button className="primary-button">Sign Up</button>
+                </Link>
             </div>
         </div>
     );

@@ -114,6 +114,18 @@
   -o-border-radius: 1rem;
 }
 
+.nav-btn{
+  background-color: var(--md-sys-color-surface-variant);
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+
+
+
+}
+
 /* Buttons */
 
 /* Home */
@@ -300,3 +312,92 @@
 }
 
 /* Sport Card */
+
+/* Forms Pages */
+
+.form-container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+#login-img{
+background-image: url("https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29uY2VydHxlbnwwfHwwfHw%3D&w=1000&q=80");
+}
+
+#signup-img{
+  background-image: url("https://saltplatecity.com/wp-content/uploads/2019/10/vivint-smart-home-concert-venue-salt-lake-city.jpg");
+
+}
+
+.form-img{
+background-size: cover;
+width: 50vw;
+height: 100vh;
+/* background-color: blue; */
+}
+
+
+.form-body{
+  /* background-color: red; */
+  width: 50vw;
+  min-width: 500px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: ;
+}
+
+
+.form-content{
+  /* background-color: purple; */
+  margin-left: 70px;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  height:500px
+
+}
+
+.form-title{
+  /* background-color: yellow; */
+  font-size: 35px;
+  font-weight: 500;
+  height:45px;
+}
+
+.form{
+  /* background-color: green; */
+  height:fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:30px 0px;
+}
+.input{
+  border-radius: 6px;
+  border:1px black solid;
+  padding:5px;
+  width:350px;
+  height:40px;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+
+.form-footer{
+  /* background-color: orange; */
+  height:80px;
+  display: flex;
+  align-items: center;
+}
+
+.register-prompt{
+
+}
+
+.input-prompt{
+  font-size: 15px;
+}
+/* Forms Pages */

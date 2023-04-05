@@ -1,51 +1,62 @@
-import '../Modal.css';
-import React, { useState } from 'react';
+// import "../Modal.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SignUp from "./SignUp";
 
-import SignUp from './SignUp'
+function Login() {
 
+  const initialState = { username: "", password: "" };
+  const [formState, setFormState] = useState(initialState);
 
-function Login({setOpenLogin}) {
+  const handleChange = (event) => {
+    setFormState({ ...formState, [event.target.id]: event.target.value });
+  };
 
-    const [registerOpen, setRegisterOpen] = useState(false);
-    const [loginOpen, setLoginOpen] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formState);
+    setFormState(initialState);
+  };
 
-    return (
-        <div className="modal-background">
-            <section className="modal-container">
-                <div className="modal-header">
-                <button 
-                    className="close-modal"
-                    onClick={() => {setOpenLogin(false);}}
-                    >
-                    &times;
-                </button>
-                    <h1 className="modal-title">LOGIN</h1>
-                </div>
-                <div className="modal-body">
-                    <p> FORM CONTENT GOES HERE </p>
-                </div>
-                <div className="modal-footer">
-                    <button>LOGIN</button>
-                    <button 
-                    className="primary-button" 
-                    onClick={() => {
-                        setLoginOpen(false);
-                        setRegisterOpen(true);
-                    }}
-                >
-                    REGISTER
-                </button>
-                </div>
+  return (
+    <div className="form-container">
 
-            </section>
-            {/* {loginOpen && <Login setOpenLogin={setLoginOpen} />} */}
-            {registerOpen && <SignUp setOpenRegister={setRegisterOpen} />}
-
-
+      <div className="form-img" id="login-img">
+        {/* <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29uY2VydHxlbnwwfHwwfHw%3D&w=1000&q=80"></img> */}
+      </div>
+      
+      <div className='form-body'>
+        <div className="form-content">
+          <p className="form-title">Login</p>
+          <div className="form">
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email" className='input-prompt'>EMAIL</label><br></br>
+            <input
+              id="email"
+              className="input"
+              type="text"
+              onChange={handleChange}
+              value={formState.username}
+            /><br></br><br></br>
+            <label htmlFor="password" className='input-prompt'>PASSWORD</label><br></br>
+            <input
+              id="password"
+              className="input"
+              type="password"
+              onChange={handleChange}
+              value={formState.password}
+              />
+          </form>
+          </div>
+        <div className="form-footer">
+          <button className="primary-button" style={{ marginRight: "20px" }}>
+            Login
+          </button>
+              </div>
+              </div>
         </div>
+    </div>
   );
 }
 
 export default Login;
-
-
