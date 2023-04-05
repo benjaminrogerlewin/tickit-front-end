@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Client from "../services/api";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import { Data } from "../Data";
 
 export default function AdminEvents(props) {
+    const { formData, setFormData } = useContext(Data)
 
     const [event, setEvent] = useState(null);
 
@@ -11,6 +13,11 @@ export default function AdminEvents(props) {
     let navigate = useNavigate();
 
     const showEvent = (e) => {
+        console.log(e)
+    //   setFormData({...formData, event_id: e.id, venue_id: e.venue_id})
+      const formDataString = JSON.stringify(formData);
+  
+      localStorage.setItem('formData', formDataString);
       navigate(`${e.id}`);
     };
 

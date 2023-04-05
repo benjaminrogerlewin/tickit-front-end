@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Client from "../services/api";
 import { Link, useNavigate } from "react-router-dom";
+import { Data } from "../Data";
 
 export default function AdminVenues(props) {
+    const { formData, setFormData } = useContext(Data)
 
     let navigate = useNavigate()
 
     const showEvents = (ven) => {
-        console.log(ven.id)
+        setFormData({...formData, venue_id: ven.id})
         navigate(`${ven.id}`)
     }
 

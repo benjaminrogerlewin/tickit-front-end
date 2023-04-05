@@ -12,6 +12,7 @@ import AdminEvents from "./components/AdminEvents";
 import EventCreate from "./components/EventCreate";
 import EventUpdate from "./components/EventUpdate";
 import AdminVenues from "./components/AdminVenues";
+import { Data } from './Data';
 
 function App() {
   const [eventContent, setEventContent] = useState([]);
@@ -26,9 +27,14 @@ function App() {
     category: "",
     all_ages: "",
     image: "",
-    venue_id: 3
+    venue_id: "",
+    event_id: ""
   });
 
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
+  
   const getVenue = () => {
     Client.get(`/venues`).then((getVenue) => {
       setVenue(getVenue.data);
@@ -77,6 +83,7 @@ function App() {
 
   return (
     <div className="App">
+      <Data.Provider value={{formData, setFormData}}>
       <Nav />
       {/* <Login /> */}
       {/* <SignUp /> */}
@@ -125,6 +132,7 @@ function App() {
           }
         />
       </Routes>
+      </Data.Provider>
     </div>
   );
 }
