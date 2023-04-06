@@ -58,9 +58,10 @@ export default function EventCreate(props) {
             </div>
             <br></br>
             <br></br>
-            <textarea
+            <input
               required
               id="date"
+              type="date"
               name="date"
               value={formData.date}
               onChange={handleChange}
@@ -73,9 +74,10 @@ export default function EventCreate(props) {
             </label>
             <br></br>
             <br></br>
-            <textarea
+            <input
               required
               id="time"
+              type="time"
               name="time"
               value={formData.time}
               onChange={handleChange}
