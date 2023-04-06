@@ -3,8 +3,6 @@ import TopTourCard from "./TopTourCard";
 import ConcertCard from "./ConcertCard";
 import SportCard from "./SportCard";
 import ComedyCard from "./ComedyCard";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const Home = (props) => {
   if (props.eventContent && props.eventContent.length > 0) {
