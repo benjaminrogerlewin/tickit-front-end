@@ -1,5 +1,5 @@
 # Welcome To Tickit!
-![Tickit](https://tephpez.imgur.com/all)
+![Tickit](https://i.imgur.com/RZFjWPZ.png)
 **BLURB**
 blurb
 
@@ -8,32 +8,28 @@ blurb
 We chose a fully collaborative experience where we were able to learn from and support each other throughout the full-stack process!
 
 `Fernando Dorado`<br/>
-[GitHub](https://github.com/lastnameisgold) |
-[LinkedIn](https://www.linkedin.com/in/fdorado/)<br/>
+U+0020[GitHub](https://github.com/lastnameisgold) |
+U+0020[LinkedIn](https://www.linkedin.com/in/fdorado/)<br/><br/>
 `Ben Lewin`<br/>
-[GitHub](https://github.com/benjaminrogerlewin) | 
-[LinkedIn](https://www.linkedin.com/in/benjaminrlewin/)<br/>
+U+0020[GitHub](https://github.com/benjaminrogerlewin) | 
+U+0020[LinkedIn](https://www.linkedin.com/in/benjaminrlewin/)<br/><br/>
 `Alpagu Saka`<br/>
-[GitHub](https://github.com/narniaeagle) | 
-[LinkedIn](https://www.linkedin.com/in/alpagus/)<br/>
+U+0020[GitHub](https://github.com/narniaeagle) | 
+U+0020[LinkedIn](https://www.linkedin.com/in/alpagus/)<br/><br/>
 `Steph Perez`<br/>
-[GitHub](https://github.com/tephpez)
-[LinkedIn](https://www.linkedin.com/in/tephpez/)<br/>
+U+0020[GitHub](https://github.com/tephpez)
+U+0020[LinkedIn](https://www.linkedin.com/in/tephpez/)<br/><br/>
 
 ## Features
 
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
+- User can view all venues, and venue info such as location, hours of operation and parking availability
+- User can view events organized by category, theme or venue
 
 ## Stack
 - Javascript, HTML, & CSS
 - DJANGO
 - React
+- Node.js
 - 
 
 
