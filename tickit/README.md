@@ -1,5 +1,5 @@
 # Welcome To Tickit!
-**Tired of paying ridiculous fees just to attend your favorite event? Enter - Tickit! Our platform offers a convenient way to find and purchase tickets without all the bogus charges. From concerts and sporting events to theater and comedy shows, we've got you covered! Say goodbye to ticket fees and hello to a better way to experience live events with Tickit.** </br>
+**Tired of paying ridiculous fees just to attend your favorite event? Us too. Enter Tickit! Our platform offers a convenient way to find and purchase tickets without all the bogus charges. From concerts and sporting events to theater and comedy shows, we've got you covered! Say goodbye to ticket fees and hello to a better way to experience live events with Tickit.** </br> </br>
 ![Tickit](https://i.imgur.com/RZFjWPZ.png)
 
 ## The Team
