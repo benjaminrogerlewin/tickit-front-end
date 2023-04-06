@@ -3,8 +3,7 @@ import Client from "../services/api";
 import { Data } from "../Data";
 
 export default function EventCreate(props) {
-
-  const { f, setf } = useContext(Data)
+  const { f, setf } = useContext(Data);
 
   const [createEvent, setCreateEvent] = useState([]);
   const [formData, setFormData] = useState({
@@ -18,13 +17,8 @@ export default function EventCreate(props) {
     all_ages: "",
 
     venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id || "101",
-    image: ""
+    image: "",
   });
-
-
-
-  
-
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -32,181 +26,171 @@ export default function EventCreate(props) {
 
   const handleSubmit = async (e) => {
     const formDataString = JSON.stringify(formData);
-  
-    localStorage.setItem('formData', formDataString);
-    
+
+    localStorage.setItem("formData", formDataString);
+
     e.preventDefault();
-    console.log(formData)
+    console.log(formData);
     const response = await Client.post(`/events`, formData);
     console.log(response.data);
     setCreateEvent(response.data);
   };
 
   return (
-    <div className="pageContainer">
-      <div className="body">
-        <div className="pageTitle">
-          <span>CREATE NEW EVENT</span>
+    <div className="event-create-container">
+      <h3>Create a new event</h3>
+
+      <form className="event-create-form" onSubmit={handleSubmit}>
+        <div className="event-form-input">
+          <label htmlFor="title" style={{}}>
+            <h5>ARTIST</h5>
+          </label>
+          <input
+            required
+            type="text"
+            id="artist"
+            name="artist"
+            value={formData.artist}
+            onChange={handleChange}
+            className="formInput"
+          />
         </div>
 
-        <div className="blogWindow" style={{ paddingTop: "30px" }}>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="title" className="homeTitle" style={{}}>
-              ARTIST
-            </label>
-            <br></br> <br></br>
-            <input
-              required
-              type="text"
-              id="artist"
-              name="artist"
-              value={formData.artist}
-              onChange={handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-            <div style={{ justifyContent: "left" }}>
-              <label htmlFor="synopsis" className="homeTitle">
-                DATE
-              </label>
-            </div>
-            <br></br>
-            <br></br>
-            <input
-              required
-              id="date"
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="formTextArea"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="time" className="homeTitle">
-              TIME
-            </label>
-            <br></br>
-            <br></br>
-            <input
-              required
-              id="time"
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              className="formTextArea"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="description" className="homeTitle">
-              DESCRIPTION
-            </label>
-            <br></br>
-            <br></br>
-            <textarea
-              required
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={handleChange}
-              className="formTextArea"
-            />
-            <br></br>
-            <label htmlFor="price" className="homeTitle" style={{}}>
-              PRICE
-            </label>
-            <br></br> <br></br>
-            <input
-              required
-              type="text"
-              id="price"
-              name="price"
-              value={formData.price}
-              onChange={handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="ticket_count" className="homeTitle" style={{}}>
-              TICKET COUNT
-            </label>
-            <br></br> <br></br>
-            <input
-              required
-              type="text"
-              id="ticket_count"
-              name="ticket_count"
-              value={formData.ticket_count}
-              onChange={handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="category" className="homeTitle" style={{}}>
-              CATEGORY
-            </label>
-            <br></br> <br></br>
-            <input
-              required
-              type="text"
-              id="category"
-              name="category"
-              value={formData.category}
-              onChange={handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="all_ages" className="homeTitle" style={{}}>
-              ALL AGES
-            </label>
-            <br></br> <br></br>
-            <input
-              required
-              type="text"
-              id="all_ages"
-              name="all_ages"
-              value={formData.all_ages}
-              onChange={handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-            <label htmlFor="image" className="homeTitle">
-              IMAGE
-            </label>
-            <br></br>
-            <br></br>
-            <textarea
-              required
-              id="image"
-              name="image"
-              value={formData.image}
-              onChange={handleChange}
-              className="formTextArea"
-            />
-            <br></br>
-            <br></br>
-            <button className="btnLarge" id="btn-create" type="submit">
-              PUBLISH
-            </button>
-          </form>
-          {createEvent && (
-            <div>
-              <h2>{createEvent.artist}</h2>
-              <p>{createEvent.date}</p>
-              <p>{createEvent.time}</p>
-              <p>{createEvent.description}</p>
-              <p>{createEvent.price}</p>
-              <p>{createEvent.ticket_count}</p>
-              <p>{createEvent.category}</p>
-              <p>{createEvent.all_ages}</p>
-            </div>
-          )}
+        <div className="event-form-input">
+          <label htmlFor="synopsis">
+            <h5>DATE</h5>
+          </label>
+          <input
+            required
+            id="date"
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="formTextArea"
+          />
         </div>
-      </div>
+
+        <div className="event-form-input">
+          <label htmlFor="time">
+            <h5>TIME</h5>
+          </label>
+          <input
+            required
+            id="time"
+            type="time"
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            className="formTextArea"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="description">
+            <h5>DESCRIPTION</h5>
+          </label>
+          <textarea
+            required
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            className="formTextArea"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="price" style={{}}>
+            <h5>PRICE</h5>
+          </label>
+          <input
+            required
+            type="text"
+            id="price"
+            name="price"
+            value={formData.price}
+            onChange={handleChange}
+            className="formInput"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="ticket_count" style={{}}>
+            <h5>TICKET COUNT</h5>
+          </label>
+          <input
+            required
+            type="text"
+            id="ticket_count"
+            name="ticket_count"
+            value={formData.ticket_count}
+            onChange={handleChange}
+            className="formInput"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="category" style={{}}>
+            <h5>CATEGORY</h5>
+          </label>
+          <input
+            required
+            type="text"
+            id="category"
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+            className="formInput"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="all_ages" style={{}}>
+            <h5>ALL AGES</h5>
+          </label>
+          <input
+            required
+            type="text"
+            id="all_ages"
+            name="all_ages"
+            value={formData.all_ages}
+            onChange={handleChange}
+            className="formInput"
+          />
+        </div>
+
+        <div className="event-form-input">
+          <label htmlFor="image">
+            <h5>IMAGE</h5>
+          </label>
+
+          <textarea
+            required
+            id="image"
+            name="image"
+            value={formData.image}
+            onChange={handleChange}
+            className="formTextArea"
+          />
+        </div>
+
+        <button className="primary-button" id="btn-create" type="submit">
+          PUBLISH
+        </button>
+      </form>
+      {createEvent && (
+        <div>
+          <h2>{createEvent.artist}</h2>
+          <p>{createEvent.date}</p>
+          <p>{createEvent.time}</p>
+          <p>{createEvent.description}</p>
+          <p>{createEvent.price}</p>
+          <p>{createEvent.ticket_count}</p>
+          <p>{createEvent.category}</p>
+          <p>{createEvent.all_ages}</p>
+        </div>
+      )}
     </div>
   );
 }
