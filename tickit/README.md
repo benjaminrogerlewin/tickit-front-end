@@ -8,17 +8,17 @@ blurb
 We chose a fully collaborative experience where we were able to learn from and support each other throughout the full-stack process!
 
 `Fernando Dorado`<br/>
-U+0020[GitHub](https://github.com/lastnameisgold) |
-U+0020[LinkedIn](https://www.linkedin.com/in/fdorado/)<br/><br/>
-`Ben Lewin`<br/>
-U+0020[GitHub](https://github.com/benjaminrogerlewin) | 
-U+0020[LinkedIn](https://www.linkedin.com/in/benjaminrlewin/)<br/><br/>
-`Alpagu Saka`<br/>
-U+0020[GitHub](https://github.com/narniaeagle) | 
-U+0020[LinkedIn](https://www.linkedin.com/in/alpagus/)<br/><br/>
-`Steph Perez`<br/>
-U+0020[GitHub](https://github.com/tephpez)
-U+0020[LinkedIn](https://www.linkedin.com/in/tephpez/)<br/><br/>
+-[GitHub](https://github.com/lastnameisgold) |
+-[LinkedIn](https://www.linkedin.com/in/fdorado/)<br/><br/>
+-`Ben Lewin`<br/>
+-[GitHub](https://github.com/benjaminrogerlewin) | 
+-[LinkedIn](https://www.linkedin.com/in/benjaminrlewin/)<br/><br/>
+-`Alpagu Saka`<br/>
+-[GitHub](https://github.com/narniaeagle) | 
+-[LinkedIn](https://www.linkedin.com/in/alpagus/)<br/><br/>
+-`Steph Perez`<br/>
+-[GitHub](https://github.com/tephpez)
+-[LinkedIn](https://www.linkedin.com/in/tephpez/)<br/><br/>
 
 ## Features
 
