@@ -1,18 +1,28 @@
 import { Link } from 'react-router-dom'
+import React from 'react'
+import logo from "../logo.svg";
 
-import Events from './Events'
-import Login from './Login'
-import SignUp from './SignUp'
+function Nav () {
 
-export default function Nav(){
+    return(
+        <div id="navbar">
+            <Link to="/">
+            <img id="tickit-logo" src={logo} alt="tickit logo" style={{marginRight:'20px'}} />
+            </Link>
 
-return(
-    <div id="navbar">
-        <h1> tickit </h1>
-        <div id="links">
-            <Link to="/Events" element={<Events/>}><button>Events</button></Link>
-            <Link to="/Login" element={<Login/>}><button>Login</button></Link>
-            <Link to="/SignUp" element={<SignUp/>}><button>Sign up</button></Link>
+            <div id="links-container">
+                <Link to="/Events">
+                    <p>Events</p>
+                </Link>
+                <Link to="/Login">
+                    <p>Login</p>
+                </Link>
+                <Link to="/SignUp">
+                <button className="primary-button">Sign Up</button>
+                </Link>
+            </div>
         </div>
-    </div>
-)}
+    );
+};
+
+export default Nav;
