@@ -34,7 +34,7 @@ function Login() {
               className="input"
               type="text"
               onChange={handleChange}
-              value={formState.username}
+              value={formState.email}
             /><br></br><br></br>
             <label htmlFor="password" className='input-prompt'>PASSWORD</label><br></br>
             <input
@@ -47,7 +47,7 @@ function Login() {
           </form>
           </div>
         <div className="form-footer">
-          <Link to="/AdminVenues">
+          <Link to="/admin">
             <button className="primary-button">Login</button>
           </Link>
               </div>
