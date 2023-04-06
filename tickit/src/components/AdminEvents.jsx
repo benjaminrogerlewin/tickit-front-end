@@ -1,18 +1,33 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Client from "../services/api";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import { Data } from "../Data";
 
 export default function AdminEvents(props) {
+    const { formData, setFormData } = useContext(Data)
   const [event, setEvent] = useState(null);
 
   let { id } = useParams();
 
   let navigate = useNavigate();
 
-  const showEvent = (e) => {
-    navigate(`${e.id}`);
-  };
+  // const showEvent = (e) => {
+  //   navigate(`${e.id}`);
+  // };
 
+    const showEvent = (e) => {
+        console.log(e)
+    //   setFormData({...formData, event_id: e.id, venue_id: e.venue_id})
+      const formDataString = JSON.stringify(formData);
+  
+      localStorage.setItem('formData', formDataString);
+      navigate(`${e.id}`);
+    };
+    const local = () => {
+      const formDataString = JSON.stringify(formData);
+      localStorage.setItem('formData', formDataString);
+    };
+    
   useEffect(() => {
     if (!id) {
       return;
@@ -31,7 +46,7 @@ export default function AdminEvents(props) {
   return (
     <div id="events-main-container">
       <Link to="/create">
-        <button className="primary-tonal-button">Create</button>
+        <button className="primary-tonal-button" onClick={() => local()}>Create</button>
       </Link>
       <div id="events-container">
         <div key={event.id}>

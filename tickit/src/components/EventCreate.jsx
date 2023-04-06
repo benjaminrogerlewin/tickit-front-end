@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Client from "../services/api";
+import { Data } from "../Data";
 
 export default function EventCreate(props) {
+
+  const { f, setf } = useContext(Data)
+
   const [createEvent, setCreateEvent] = useState([]);
   const [formData, setFormData] = useState({
     artist: "",
@@ -12,16 +16,27 @@ export default function EventCreate(props) {
     ticket_count: "",
     category: "",
     all_ages: "",
-    venue_id: 4,
-    image: "",
+
+    venue_id: JSON.parse(localStorage.getItem("formData"))?.venue_id || "101",
+    image: ""
   });
+
+
+
+  
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
+    const formDataString = JSON.stringify(formData);
+  
+    localStorage.setItem('formData', formDataString);
+    
     e.preventDefault();
+    console.log(formData)
     const response = await Client.post(`/events`, formData);
     console.log(response.data);
     setCreateEvent(response.data);
