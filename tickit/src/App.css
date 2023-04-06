@@ -118,16 +118,13 @@ body {
   -o-border-radius: 1rem;
 }
 
-.nav-btn{
+.nav-btn {
   background-color: var(--md-sys-color-surface-variant);
   border: none;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
-
-
-
 }
 
 /* Buttons */
@@ -448,9 +445,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   gap: 1.5rem;
-  padding: 4rem;
 }
 
 .admin-event-card-content {
@@ -546,29 +542,26 @@ textarea {
 
 /* Forms Pages */
 
-.form-container{
+.form-container {
   display: flex;
   flex-direction: row;
 }
 
-
-#login-img{
-background-image: url("https://images.unsplash.com/photo-1604364505966-e35d40abb1ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80");
+#login-img {
+  background-image: url("https://images.unsplash.com/photo-1604364505966-e35d40abb1ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80");
 }
 
-#signup-img{
+#signup-img {
   background-image: url("https://images.unsplash.com/photo-1563841930606-67e2bce48b78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80");
-
 }
 
-.form-img{
-background-size: cover;
-width: 50vw;
-height: 100vh;
+.form-img {
+  background-size: cover;
+  width: 50vw;
+  height: 100vh;
 }
 
-
-.form-body{
+.form-body {
   width: 50vw;
   min-width: 500px;
   height: 100vh;
@@ -576,47 +569,45 @@ height: 100vh;
   align-items: center;
 }
 
-
-.form-content{
+.form-content {
   margin-left: 70px;
-  padding:20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  height:500px
-
+  height: 500px;
 }
 
-.form-title{
+.form-title {
   font-size: 35px;
   font-weight: 500;
-  height:45px;
+  height: 45px;
 }
 
-.form{
-  height:fit-content;
+.form {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding:30px 0px;
+  padding: 30px 0px;
 }
 
-.input{
+.input {
   border-radius: 6px;
-  border:1px black solid;
-  padding:5px;
-  width:350px;
-  height:40px;
+  border: 1px black solid;
+  padding: 5px;
+  width: 350px;
+  height: 40px;
   font-style: italic;
   margin-top: 6px;
 }
 
-.form-footer{
-  height:80px;
+.form-footer {
+  height: 80px;
   display: flex;
   align-items: center;
 }
 
-.input-prompt{
+.input-prompt {
   font-size: 14px;
   font-weight: 450;
 }

@@ -50,8 +50,8 @@ export default function AdminEvents(props) {
           Create
         </button>
       </Link>
-      <div id="admin-events-container">
-        <div key={event.id}>
+      <div key={event.id}>
+        <div id="admin-events-container">
           {event.events.map((e, id) => (
             <div className="admin-event-card">
               <div className="admin-event-card-content">
