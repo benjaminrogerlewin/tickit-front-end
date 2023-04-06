@@ -22,178 +22,143 @@ const EventUpdate = (props) => {
   }, [props.movieContent]);
 
   return (
-    <div className="pageContainer">
-      <div className="body">
-        <div className="pageTitle">
-          <span>EDIT BLOG</span>
+    <div className="event-create-container">
+      <h3>Update event</h3>
+
+      <form
+        className="event-create-form"
+        onSubmit={(e) => props.handleSubmit(e, id)}
+      >
+        <div className="event-form-input">
+          <label htmlFor="artist">
+            <h5>ARTIST</h5>
+          </label>
+          <input
+            type="text"
+            id="artist"
+            name="artist"
+            value={props.formData.artist}
+            onChange={props.handleChange}
+            className="formInput"
+          />
         </div>
 
-        <div className="blogWindow" style={{ paddingTop: "30px" }}>
-          <form onSubmit={(e) => props.handleSubmit(e, id)}>
-            <label htmlFor="artist" className="homeTitle">
-              ARTIST
-            </label>
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="date">
+            <h5>DATE</h5>
+          </label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={props.formData.date}
+            onChange={props.handleChange}
+            className="formInput"
+          />
+        </div>
 
-            <input
-              type="text"
-              id="artist"
-              name="artist"
-              value={props.formData.artist}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="time">
+            <h5>TIME</h5>
+          </label>
+          <input
+            type="time"
+            id="time"
+            name="time"
+            value={props.formData.time}
+            onChange={props.handleChange}
+            className="formInput"
+          />
+        </div>
 
-            <label htmlFor="date" className="homeTitle">
-              DATE
-            </label>
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="description">
+            <h5>DESCRIPTION</h5>
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            value={props.formData.description}
+            onChange={props.handleChange}
+            className="formInput"
+          />
+        </div>
 
-            <input
-              type="text"
-              id="date"
-              name="date"
-              value={props.formData.date}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="price">
+            <h5>PRICE</h5>
+          </label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            value={props.formData.price}
+            onChange={props.handleChange}
+            className="formInput"
+          />
+        </div>
 
-            <label htmlFor="time" className="homeTitle">
-              TIME
-            </label>
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="ticket_count">
+            <h5>TICKET COUNT</h5>
+          </label>
+          <input
+            type="text"
+            id="ticket_count"
+            name="ticket_count"
+            value={props.formData.ticket_count}
+            onChange={props.handleChange}
+          />
+        </div>
 
-            <input
-              type="text"
-              id="time"
-              name="time"
-              value={props.formData.time}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="category">
+            <h5>CATEGORY</h5>
+          </label>
 
-            <label htmlFor="description" className="homeTitle">
-              DESCRIPTION
-            </label>
-            <br></br>
-            <br></br>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            value={props.formData.category}
+            onChange={props.handleChange}
+          />
+        </div>
 
-            <input
-              type="text"
-              id="description"
-              name="description"
-              value={props.formData.description}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="all_ages">
+            <h5>ALL AGES</h5>
+          </label>
+          <input
+            type="text"
+            id="all_ages"
+            name="all_ages"
+            value={props.formData.all_ages}
+            onChange={props.handleChange}
+          />
+        </div>
 
-            <label htmlFor="price" className="homeTitle">
-              PRICE
-            </label>
-            <br></br>
-            <br></br>
+        <div className="event-form-input">
+          <label htmlFor="image">
+            <h5>IMAGE</h5>
+          </label>
+          <textarea
+            id="image"
+            name="image"
+            value={props.formData.image}
+            onChange={props.handleChange}
+          />
+        </div>
 
-            <input
-              type="text"
-              id="price"
-              name="price"
-              value={props.formData.price}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-
-            <label htmlFor="ticket_count" className="homeTitle">
-              TICKET COUNT
-            </label>
-            <br></br>
-            <br></br>
-
-            <input
-              type="text"
-              id="ticket_count"
-              name="ticket_count"
-              value={props.formData.ticket_count}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-
-            <label htmlFor="category" className="homeTitle">
-              CATEGORY
-            </label>
-            <br></br>
-            <br></br>
-
-            <input
-              type="text"
-              id="category"
-              name="category"
-              value={props.formData.category}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-
-            <label htmlFor="all_ages" className="homeTitle">
-              ALL AGES
-            </label>
-            <br></br>
-            <br></br>
-
-            <input
-              type="text"
-              id="all_ages"
-              name="all_ages"
-              value={props.formData.all_ages}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-
-            <label htmlFor="image" className="homeTitle">
-              IMAGE
-            </label>
-            <br></br>
-            <br></br>
-
-            <input
-              type="text"
-              id="image"
-              name="image"
-              value={props.formData.image}
-              onChange={props.handleChange}
-              className="formInput"
-            />
-            <br></br>
-            <br></br>
-
-            <button type="submit" className="btnLarge" id="btn-create">
-              UPDATE
-            </button>
-          </form>
-          {/* <div>
+        <button className="primary-button" type="submit">
+          Update event
+        </button>
+      </form>
+      {/* <div>
             <h2>{props.updateBlog.title}</h2>
             <p>{props.updateBlog.synopsis}</p>
             <p>{props.updateBlog.review}</p>
           </div> */}
-        </div>
-      </div>
     </div>
   );
 };

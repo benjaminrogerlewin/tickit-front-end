@@ -42,7 +42,7 @@ export default function EventCreate(props) {
 
       <form className="event-create-form" onSubmit={handleSubmit}>
         <div className="event-form-input">
-          <label htmlFor="title" style={{}}>
+          <label htmlFor="title">
             <h5>ARTIST</h5>
           </label>
           <input
@@ -101,7 +101,7 @@ export default function EventCreate(props) {
         </div>
 
         <div className="event-form-input">
-          <label htmlFor="price" style={{}}>
+          <label htmlFor="price">
             <h5>PRICE</h5>
           </label>
           <input
@@ -116,7 +116,7 @@ export default function EventCreate(props) {
         </div>
 
         <div className="event-form-input">
-          <label htmlFor="ticket_count" style={{}}>
+          <label htmlFor="ticket_count">
             <h5>TICKET COUNT</h5>
           </label>
           <input
@@ -131,7 +131,7 @@ export default function EventCreate(props) {
         </div>
 
         <div className="event-form-input">
-          <label htmlFor="category" style={{}}>
+          <label htmlFor="category">
             <h5>CATEGORY</h5>
           </label>
           <input
@@ -146,7 +146,7 @@ export default function EventCreate(props) {
         </div>
 
         <div className="event-form-input">
-          <label htmlFor="all_ages" style={{}}>
+          <label htmlFor="all_ages">
             <h5>ALL AGES</h5>
           </label>
           <input
@@ -171,12 +171,11 @@ export default function EventCreate(props) {
             name="image"
             value={formData.image}
             onChange={handleChange}
-            className="formTextArea"
           />
         </div>
 
-        <button className="primary-button" id="btn-create" type="submit">
-          PUBLISH
+        <button className="primary-button" type="submit">
+          Create event
         </button>
       </form>
       {createEvent && (
