@@ -86,8 +86,6 @@ function App() {
     <div className="App">
       <Data.Provider value={{formData, setFormData}}>
       <Nav />
-      {/* <Login /> */}
-      {/* <SignUp /> */}
       <Routes>
         <Route path="/" element={<Home eventContent={eventContent}/>} />
         <Route
@@ -132,6 +130,12 @@ function App() {
             />
           }
         />
+        <Route
+        path="/Login" element={<Login />}>
+        </Route>
+        <Route
+        path="/SignUp" element={<SignUp />}>
+        </Route>
       </Routes>
       </Data.Provider>
     </div>

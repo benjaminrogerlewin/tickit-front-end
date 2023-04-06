@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Welcome To Tickit!
+**Tired of paying ridiculous fees just to attend your favorite event? Us too. Enter Tickit! Our platform offers a convenient way to find and purchase tickets without all the bogus charges. From concerts and sporting events to theater and comedy shows, we've got you covered! Say goodbye to ticket fees and hello to a better way to experience live events with Tickit.** </br> </br>
+![Tickit](https://i.imgur.com/RZFjWPZ.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The Team
 
-## Available Scripts
+We chose a fully collaborative experience where we were able to learn from and support each other throughout the full-stack process! </br>
 
-In the project directory, you can run:
+`Fernando Dorado` - [GitHub](https://github.com/lastnameisgold) | [LinkedIn](https://www.linkedin.com/in/fdorado/)<br/><br/>
+`Ben Lewin` - [GitHub](https://github.com/benjaminrogerlewin) | [LinkedIn](https://www.linkedin.com/in/benjaminrlewin/)<br/><br/>
+`Alpagu Saka` - [GitHub](https://github.com/narniaeagle) | [LinkedIn](https://www.linkedin.com/in/alpagus/)<br/><br/>
+`Steph Perez` - [GitHub](https://github.com/tephpez) | [LinkedIn](https://www.linkedin.com/in/tephpez/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User can view all venues, and venue info such as location, hours of operation and parking availability
+- User can view events organized by category, theme or venue
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Stack
+- Javascript, HTML, & CSS
+- DJANGO
+- React
+- Node.js
 
-### `npm test`
+## Links
+- [Trello](https://trello.com/b/DZ0NNiJz/tick-it)<br/>
+- [Brainstorm](https://www.figma.com/file/8Wr3ZtYYizaRjtiMLvmOm4/Tick-It-Brainstorm?node-id=31-374&t=rIGzjj4tFyf0I8B7-0)<br/>
+- [Wireframe](https://www.figma.com/file/64oHDXgb10xWTkvma5calY/tickit?node-id=0-1&t=ZxYj9TOsXa1xn80H-0)<br/>
+- [ERD](https://app.diagrams.net/#G1yU_hKvseXpkJyQ044fDx3s3k1m4hdxWf)<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## References
+- [Django DB](https://github.com/seir-123/u4_lesson_django_intro-1)
+- [Django API](https://github.com/seir-123/u4_lesson_django_REST_API) 
+- ChatGPT - misc/minor troubleshooting
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
