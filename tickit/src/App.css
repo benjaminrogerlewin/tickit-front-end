@@ -381,20 +381,25 @@ body {
   padding: 4rem;
 }
 
-#events-container {
+/* #events-container {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+} */
+
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
   gap: 1.5rem;
 }
 
 .event-card {
-  width: 50%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface-variant);
@@ -413,6 +418,96 @@ body {
 }
 
 /* Events */
+
+/* Admin Events */
+
+.admin-events-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+#admin-events-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+.admin-event-card-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-event-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items:  left; */
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+/* Admin Events */
+
+/* Events Create */
+
+.event-create-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+.event-create-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 1.5rem;
+}
+
+.event-form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.event-form-input input,
+textarea {
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Events Create */
 
 /* Footer */
 #footer {
